@@ -4,7 +4,8 @@
   "description": "A simple stopclock for performing time measurements",
   "main": "stopclock.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint *.js"
   },
   "repository": {
     "type": "git",
@@ -21,5 +22,9 @@
   "bugs": {
     "url": "https://github.com/dwolters/stopclock/issues"
   },
-  "homepage": "https://github.com/dwolters/stopclock#readme"
+  "homepage": "https://github.com/dwolters/stopclock#readme",
+  "devDependencies": {
+    "eslint": "^3.12.2",
+    "eslint-config-google": "^0.7.1"
+  }
 }
