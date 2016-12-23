@@ -30,6 +30,7 @@ class Stopclock {
      * Stop measurement.
      * @param {boolean} printToConsole If true, the elapsed time is printed to the console.
      * @throw {Error} Throws an error if no measurement is currently running.
+	 * @return {number} Time in nanoseconds since the measure has been started
      */
     stop(printToConsole) {
         if (this.startTime) {
@@ -40,6 +41,7 @@ class Stopclock {
             if(printToConsole) {
                 console.log(this.name + ' (#' + this.measurements.length + '): ' + this.convertTime(time) + this.unit);
             }
+			return time;
         } else {
             throw new Error('Nothing to be stopped');
         }
